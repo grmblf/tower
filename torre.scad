@@ -5,16 +5,19 @@ cylinder(h=2.5, r=$RADIUS, $fn=6);
 
 //torre  (fins a 2.86)
 translate([0,0,2.4]) {
-cylinder(h=26.2, r1=$RADIUS-1.5, r2=$RADIUS-5, $fn=6);
-cylinder(h=27.5, r1=$RADIUS-3.5, r2=$RADIUS-5, $fn=80);
+    cylinder(h=26.2, r1=$RADIUS-1.5, r2=$RADIUS-5, $fn=6);
+    cylinder(h=27.6, r1=$RADIUS-3.0, r2=$RADIUS-5, $fn=80);
 }
 
 //cap
+    translate([0,0,27.5])
+        cylinder(h=2.5, r1=$RADIUS-5, r2=$RADIUS-1, $fn=6);
     translate([0,0,28.5])
-    cylinder(h=1.6, r1=$RADIUS-5, r2=$RADIUS-1, $fn=6);
+        cylinder(h=1.5, r1=$RADIUS-5, r2=$RADIUS-1, $fn=80);
+    
 
 difference() {    
-    translate([0,0,29.9])
+    translate([0,0,30])
     cylinder(h=7, r=$RADIUS-1, $fn=80);
     
     translate([0,0,30])
